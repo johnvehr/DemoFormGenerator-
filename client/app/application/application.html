@@ -6,4 +6,248 @@
       <h1 ng-show="formStatus">Thank you!</h1>
     </div>
   </div>
+  <form ng-ctrl="ApplicationCtrl" ng-hide="formStatus">
+    <ul ng-hide="formStatus" class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">person</i>Applicant Information</div>
+        <div class="collapsible-body">
+          <div class="row applicant-form">
+          <!-- form placement -->
+            <div class="row">
+              <div class="input-field col s12 m3 l3">
+                <input id="first_name" type="text" class="validate" ng-model="appForm.first_name">
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s12 m3 l3">
+                <input id="middle_name" type="text" class="validate" ng-model="appForm.middle_name">
+                <label for="middle_name">M.I.</label>
+              </div>
+              <div class="input-field col s12 m3 l3">
+                <input id="last_name" type="text" class="validate" ng-model="appForm.last_name">
+                <label for="last_name">Last Name</label>
+              </div>
+              <div class="input-field col s12 m3 l3">
+                <input type="date" class="datepicker" ng-model="appForm.date">
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="address" type="text" class="validate" ng-model="appForm.address">
+                <label for="address">Street Address</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m4 l4">
+                <input id="city" type="text" class="validate" ng-model="appForm.city">
+                <label for="city">City</label>
+              </div>
+              <div class="input-field col s12 m4 l4">
+                <input id="state" type="text" class="validate" ng-model="appForm.state">
+                <label for="state">State</label>
+              </div>
+              <div class="input-field col s12 m4 l4">
+                <input id="zip" type="text" class="validate" ng-model="appForm.zip">
+                <label for="zip">Zip</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m6 l6">
+                <input id="phone" type="text" class="validate" ng-model="appForm.phone">
+                <label for="phone">Phone</label>
+              </div>
+              <div class="input-field col s12 m6 l6">
+                <input id="email" type="text" class="validate" ng-model="appForm.email">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m4 l4">
+                <input type="date" class="datepicker" ng-model="appForm.date_available">
+              </div>
+              <div class="input-field col s12 m4 l4">
+                <input id="desired_salary" type="text" class="validate" ng-model="appForm.desired_salary">
+                <label for="desired_salary">Desired Salary</label>
+              </div>
+              <div class="input-field col s12 m4 l4">
+                <input id="position" type="text" class="validate" ng-model="appForm.position">
+                <label for="position">Position Applied For</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6 m6 l6">
+                <p>Are you a citizen of the United States?</p>
+                <input type="radio" class="filled-in" id="filled-in-box-yes" value="yes" ng-model="appForm.citizen" />
+                <label for="filled-in-box-yes">Yes</label>
+                <input type="radio" class="filled-in" id="filled-in-box-no" value="no" ng-model="appForm.citizen" />
+                <label for="filled-in-box-no">No</label>
+              </div>
+              <div class="input-field col s6 m6 l6">
+                <p>If no, are you authorized to work in the U.S.?</p>
+                <input type="radio" class="filled-in" id="auth-yes" value="yes" ng-model="appForm.authorized" />
+                <label for="auth-yes">Yes</label>
+                <input type="radio" class="filled-in" id="auth-no" value="no" ng-model="appForm.authorized" />
+                <label for="auth-no">No</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m6 l6">
+                <p>Have you ever worked for this Company?</p>
+                <input type="radio" class="filled-in" id="work-yes" value="yes" ng-model="appForm.prior_worked" />
+                <label for="work-yes">Yes</label>
+                <input type="radio" class="filled-in" id="work-no" value="no" ng-model="appForm.prior_worked" />
+                <label for="work-no">No</label>
+              </div>
+              <div class="input-field col s12 m6 l6">
+                <input id="when" type="text" class="validate" ng-model="appForm.when">
+                <label for="when">If so, when?</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m6 l6">
+                <p>Have you ever been convicted of a felony?</p>
+                <input type="radio" class="filled-in" id="felony-yes" value="yes" ng-model="appForm.felony" />
+                <label for="felony-yes">Yes</label>
+                <input type="radio" class="filled-in" id="felony-no" value="no" ng-model="appForm.felony" />
+                <label for="felony-no">No</label>
+              </div>
+              <div class="input-field col s12 m6 l6">
+                <input id="felony_explain" type="text" class="validate" ng-model="appForm.felony_explain">
+                <label for="felony_explain ">If yes, explain?</label>
+              </div>
+            </div>
+          </div>
+       </div>
+     </li>
+     <li>
+       <div class="collapsible-header"><i class="material-icons">school</i>Education</div>
+       <div class="collapsible-body">
+         <div class="row applicant-form">
+         <!-- high school -->
+           <div class="row">
+             <div class="input-field col s12 m6 l6">
+               <input id="high_school" type="text" class="validate" ng-model="appForm.high_school">
+               <label for="high_school">High School</label>
+             </div>
+             <div class="input-field col s12 m6 l6">
+               <input id="high_school_address" type="text" class="validate" ng-model="appForm.high_school_address">
+               <label for="high_school_address">Address</label>
+             </div>
+           </div>
+           <div class="row">
+             <div class="input-field col s12 m3 l3">
+               <input id="high_school_from" type="text" class="validate" ng-model="appForm.high_school_from">
+               <label for="high_school_from">From</label>
+             </div>
+             <div class="input-field col s12 m3 l3">
+               <input id="high_school_to" type="text" class="validate" ng-model="appForm.high_school_to">
+               <label for="high_school_to">To</label>
+             </div>
+             <div class="input-field col s12 m3 l3">
+               <p>Did you graduate?</p>
+               <input type="radio" class="filled-in" id="high_school_graduated" value="yes" ng-model="appForm.high_school_graduate" />
+               <label for="high_school_graduated">Yes</label>
+               <input type="radio" class="filled-in" id="high_school_didnot_graduate" value="no" ng-model="appForm.high_school_graduate" />
+               <label for="high_school_didnot_graduate">No</label>
+             </div>
+             <div class="input-field col s12 m3 l3">
+               <input id="high_school_degree" type="text" class="validate" ng-model="appForm.high_school_degree">
+               <label for="high_school_degree">Degree</label>
+             </div>
+           </div>
+           <!-- college -->
+           <div class="row">
+             <div class="input-field col s12 m6 l6">
+               <input id="college" type="text" class="validate" ng-model="appForm.college">
+               <label for="college">College</label>
+             </div>
+             <div class="input-field col s12 m6 l6">
+               <input id="college_address" type="text" class="validate" ng-model="appForm.college_address">
+               <label for="college_address">Address</label>
+             </div>
+           </div>
+           <div class="row">
+             <div class="input-field col s12 m3 l3">
+               <input id="college_from" type="text" class="validate" ng-model="appForm.college_from">
+               <label for="college_from">From</label>
+             </div>
+             <div class="input-field col s12 m3 l3">
+               <input id="college_to" type="text" class="validate" ng-model="appForm.college_to">
+               <label for="college_to">To</label>
+             </div>
+             <div class="input-field col s12 m3 l3">
+               <p>Did you graduate?</p>
+               <input type="radio" class="filled-in" id="college_graduated" value="yes" ng-model="appForm.college_graduate" />
+               <label for="college_graduated">Yes</label>
+               <input type="radio" class="filled-in" id="college_didnot_graduate" value="no" ng-model="appForm.college_graduate" />
+               <label for="college_didnot_graduate">No</label>
+             </div>
+             <div class="input-field col s12 m3 l3">
+               <input id="college_degree" type="text" class="validate" ng-model="appForm.college_degree">
+               <label for="college_degree">Degree</label>
+             </div>
+           </div>
+           <!-- other -->
+           <div class="row">
+             <div class="input-field col s12 m6 l6">
+               <input id="other" type="text" class="validate" ng-model="appForm.other">
+               <label for="other">Other</label>
+             </div>
+             <div class="input-field col s12 m6 l6">
+               <input id="other_address" type="text" class="validate" ng-model="appForm.other_address">
+               <label for="other_address">Address</label>
+             </div>
+           </div>
+           <div class="row">
+             <div class="input-field col s12 m3 l3">
+               <input id="other_from" type="text" class="validate" ng-model="appForm.other_from">
+               <label for="other_from">From</label>
+             </div>
+             <div class="input-field col s12 m3 l3">
+               <input id="other_to" type="text" class="validate" ng-model="appForm.other_to">
+               <label for="other_to">To</label>
+             </div>
+             <div class="input-field col s12 m3 l3">
+               <p>Did you graduate?</p>
+               <input type="radio" class="filled-in" id="other_graduated" value="yes" ng-model="appForm.other_graduate" />
+               <label for="other_graduated">Yes</label>
+               <input type="radio" class="filled-in" id="other_didnot_graduate" value="no" ng-model="appForm.other_graduate" />
+               <label for="other_didnot_graduate">No</label>
+             </div>
+             <div class="input-field col s12 m3 l3">
+               <input id="other_degree" type="text" class="validate" ng-model="appForm.other_degree">
+               <label for="other_degree">Degree</label>
+             </div>
+           </div>
+         </div>
+       </div>
+     </li>
+     <li>
+       <div class="collapsible-header"><i class="material-icons">people</i>References</div>
+       <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+     </li>
+     <li>
+       <div class="collapsible-header"><i class="material-icons">work</i>Previous Employment</div>
+       <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+     </li>
+     <li>
+       <div class="collapsible-header"><i class="material-icons">security</i>Military</div>
+       <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+     </li>
+   </ul>
+   <button type="submit" ng-click="saveData()" class="btn">Submit</button>
+  </form>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $('.collapsible').collapsible({
+   accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+ });
+ $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+});
+</script>
 </div>
