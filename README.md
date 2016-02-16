@@ -1,25 +1,26 @@
-# emp-application-gen
+# DemoFormWordConverter
+Convert AngularJS form data to a word doc via Node & Express.
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.1.1.
+**Setup**
+  * `npm install`
+  * `bower install`
+  * `grunt serve`
 
-## Getting Started
+**Additional node modules**
+  * `npm install docxtemplater`
 
-### Prerequisites
+**Additional bower components on top of default**
+  * `bower install materialize --save`
+  * `bower install angular-file-saver --save`
 
-- [Git](https://git-scm.com/)
-- [Node.js and npm](nodejs.org) Node ^4.2.3, npm ^2.14.7
-- [Bower](bower.io) (`npm install --global bower`)
-- [Ruby](https://www.ruby-lang.org) and then `gem install sass`
-- [Grunt](http://gruntjs.com/) (`npm install --global grunt-cli`)
-- [SQLite](https://www.sqlite.org/quickstart.html)
+**Port**
+  * `localhost:9000`
 
-### Developing
+**Endpoints**
+  * post "/api/application/write"
+  * get "/api/application/"
 
-1. Run `npm install` to install server dependencies.
-
-2. Run `bower install` to install front-end dependencies.
-
-3. Run `grunt serve` to start the development server. It should automatically open the client in your browser when ready.
+**Bugs & To do**
 
 ## Build & development
 
