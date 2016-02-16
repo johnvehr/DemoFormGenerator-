@@ -3,3 +3,23 @@ $proverbs_off_blue:#80EAF9;
 $proverbs_yellow:#FBE239;
 $proverbs_ruby:#E64C3E;
 $proverbs_green:#B1DC85;
+
+//GLOBAL FORM
+.input-field label {
+  font-size:0.8rem;
+}
+input[type="text"]:focus{
+  border-bottom:1px solid $proverbs !important;
+  box-shadow: 0 1px 0 0 $proverbs !important;
+}
+input[type="text"]:focus + label{
+  color:$proverbs !important;
+}
+input[type="text"].valid {
+  border-bottom:1px solid $proverbs_green;
+  box-shadow:0 1px 0 0 $proverbs_green;
+}
+input[type="radio"]:checked + label:after{
+  border:2px solid $proverbs_green;
+  background:$proverbs_green;
+}
