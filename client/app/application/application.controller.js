@@ -2,5 +2,8 @@
 
 angular.module('empApplicationGenApp')
   .controller('ApplicationCtrl', function ($scope) {
-    $scope.message = 'Hello';
+
+    $scope.formStatus = false;
+    $scope.appForm = {}
+
   });
