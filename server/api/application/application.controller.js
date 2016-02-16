@@ -63,6 +63,24 @@ function removeEntity(res) {
 }
 
 // Gets a list of Applications
+export function write(req,res){
+  var new_data = req.body
+  var content = fs
+    .readFileSync(__dirname + "/input.docx", "binary");
+
+  var doc = new Docxtemplater(content);
+
+  doc.setData(new_data);
+
+  doc.render();
+
+  var buf = doc.getZip()
+             .generate({type:"nodebuffer"});
+
+  fs.writeFileSync(__dirname+"/employment_application.doc",buf);
+  res.send('success')
+}
+
 export function index(req, res) {
   Application.findAll()
     .then(responseWithResult(res))
@@ -82,10 +100,6 @@ export function show(req, res) {
 }
 
 // Creates a new Application in the DB
-
-export function write(req,res){
-  console.log('route created')
-}
 
 export function create(req, res) {
   Application.create(req.body)
