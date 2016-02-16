@@ -11,6 +11,7 @@
 
 import _ from 'lodash';
 var sqldb = require('../../sqldb');
+var fs = require('fs');
 var Docxtemplater = require('docxtemplater');
 var path = require('path');
 
