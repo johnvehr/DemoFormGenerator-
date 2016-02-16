@@ -23,3 +23,53 @@ input[type="radio"]:checked + label:after{
   border:2px solid $proverbs_green;
   background:$proverbs_green;
 }
+
+//
+.proverbs-header{
+  margin-top:10px;
+  border-radius: 4px;
+  text-align: center;
+  padding:20px;
+  background:$proverbs;
+  h1{
+    border-radius: 4px;
+    padding:20px;
+    background:$proverbs_green;
+    color:rgba(181, 181, 181,1);
+    letter-spacing:2px;
+    font-weight:300;
+    font-size:1.5em;
+    color:#FFF;
+  }
+}
+.applicant-form{
+  padding:30px
+}
+.applicant-section-title{
+  background:$proverbs_ruby;
+  border-radius: 4px;
+  color:#FFF;
+  text-align: left;
+  letter-spacing: 1px;
+  font-weight: 300;
+  padding:10px 15px;
+}
+
+.collapsible-body{
+  background:#EAEAEA;
+  p{
+    padding:1rem;
+  }
+}
+.collapsible-header{
+  color:$proverbs;
+}
+
+.btn {
+  background:$proverbs_yellow;
+  color:#FFF;
+  &:hover{
+    background:#FBE239;
+    color:#FFF;
+  }
+}
