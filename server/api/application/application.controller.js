@@ -11,6 +11,9 @@
 
 import _ from 'lodash';
 var sqldb = require('../../sqldb');
+var Docxtemplater = require('docxtemplater');
+var path = require('path');
+
 var Application = sqldb.Application;
 
 function handleError(res, statusCode) {
@@ -79,6 +82,11 @@ export function show(req, res) {
 }
 
 // Creates a new Application in the DB
+
+export function write(req,res){
+  console.log('route created')
+}
+
 export function create(req, res) {
   Application.create(req.body)
     .then(responseWithResult(res, 201))
