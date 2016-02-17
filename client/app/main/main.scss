@@ -1,3 +1,5 @@
+$proverbs:#72D2DF;
+
 .thing-form {
   margin: 20px 0;
 }
@@ -24,4 +26,78 @@
 
 .navbar-text {
   margin-left: 15px;
+}
+nav {
+  background:#FFF;
+  .brand-logo{
+    color:$proverbs;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+}
+.personal-intro{
+  text-align:center;
+  padding-top:80px;
+  padding-bottom:60px;
+  img{
+    max-width:120px;
+    margin-bottom:20px;
+  }
+  p{
+    text-align: left;
+    font-size:1.4em;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+  .proverbs{
+    color:$proverbs;
+  }
+}
+
+.parallax-container {
+  height: 550px;
+  p{
+    height: 100%;
+    text-align: center;
+    margin:0 auto;
+    padding-top:10%;
+    padding-right: 70px;
+    padding-left: 70px;
+    font-weight:200;
+    background:rgba(132, 132, 132, 0.63);//new
+    color:#FFF;//new
+    //background:rgba(143, 219, 229, 0.4);
+    //color:rgba(255, 255, 255, 0.87);
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    span:last-child{
+      font-weight: 200;
+      font-size: 0.5em;
+      margin-top:50px;
+      display:inline-block;
+      padding:10px;
+      background:rgb(114, 210, 223);//new
+      border-radius:4px;//new
+    }
+  }
+}
+
+.section-container{
+  padding-top:25px;
+  img {
+    max-width:150px;
+    border-radius:40px;
+  }
+  p{
+    font-size:1.5em;
+    color:gray;
+    letter-spacing: 2px;
+    font-weight: 200;
+  }
+  .office{
+    font-weight:300;
+    display:inline-box;
+    padding-top:25px;
+    color:rgba(0, 0, 0, 0.87);
+  }
 }
